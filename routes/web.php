@@ -16,6 +16,6 @@ Route::controller(PostController::class)->group(function(){
     Route::get('posts', 'index');
     Route::post('posts', 'store')->name('posts.store');
 });
-Route::get('/testmeagain', function () {
+Route::get('/', function () {
     return view('welcome');
 });

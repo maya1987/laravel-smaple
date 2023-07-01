@@ -14,6 +14,7 @@ class Post extends Model
     ];
 
 public function getUserPost(){
-
+    $post = Post::get();
+    return $post;
 }
 }

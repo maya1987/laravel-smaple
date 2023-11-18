@@ -1,3 +1,4 @@
+
 /**
      * Save questionaires
      *
@@ -110,7 +111,7 @@
                 $milestone_status = 'TEST';
              }
              if($spliName  == 'Plevin/CL_PLV_2_1' || $spliName  == 'Plevin/CL_PLV_3_1'
-             || $spliName  == 'Plevin/CL_PLVR4' || $spliName  == 'Plevin/CL_PLVR5_2'){
+             || $spliName  == 'Plevin/CL_PLVR4' || $spliName  == 'Plevin/CL_PLVR5_2' || $spliName  == 'Plevin/CL_PLVR1' || $spliName  == 'Plevin/CL_PLVR6'){
                 if($questionCount > 14){
                     $this->liveSessionInterface->createUserMilestoneStats(array(
                         "user_id" => $userId,
@@ -119,28 +120,6 @@
                     )
                       );
                  }
-             }
-             elseif($spliName  == 'Plevin/CL_PLVR1'){
-                if($questionCount > 15){
-                    $this->liveSessionInterface->createUserMilestoneStats(array(
-                        "user_id" => $userId,
-                        "source" => $source,
-                        "questions" => 1,
-                    )
-                      );
-                 }
-
-             }
-             elseif($spliName  == 'Plevin/CL_PLVR6'){
-                if($questionCount > 13){
-                    $this->liveSessionInterface->createUserMilestoneStats(array(
-                        "user_id" => $userId,
-                        "source" => $source,
-                        "questions" => 1,
-                    )
-                      );
-                 }
-
              }
              else{
                 if($questionCount > 14){
